@@ -1,0 +1,278 @@
+[
+  {
+    "info": {
+      "name": "A3CBTCPTH",
+      "description": "Rede Neural A3CBTCPTH"
+    },
+    "fields": [
+      {
+        "field_id": "ep_save",
+        "field_label": "Epsódios",
+        "field_placeholder": "Selecione um Epsódios",
+        "field_type": "text"
+      },
+      {
+        "field_id": "id_train",
+        "field_label": "Código do treino",
+        "field_placeholder": "Informe o código do treino",
+        "field_type": "text"
+      },
+      {
+        "field_id": "env_mode",
+        "field_label": "Modo",
+        "field_placeholder": "Informe o modo do ambiente",
+        "field_type": "text"
+      },
+      {
+        "field_id": "sys",
+        "field_label": "Sistema de treinamento",
+        "field_placeholder": "Informe o sistema de treinamento",
+        "field_type": "text"
+      },
+      {
+        "field_id": "worker",
+        "field_label": "Id do worker",
+        "field_placeholder": "Informe o id do worker",
+        "field_type": "text"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "ma/SimpleMA",
+      "description": "Media Móvel Simples"
+    },
+    "fields": [
+      {
+        "field_id": "window_size",
+        "field_label": "Período",
+        "field_placeholder": "Informe o tamanho do período",
+        "field_type": "text"
+      },
+      {
+        "field_id": "uptrend_action",
+        "field_label": "Ação para tendência de alta",
+        "field_placeholder": "Informe a ação para a tendência de alta",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "downtrend_action",
+        "field_label": "Ação para tendência de baixa",
+        "field_placeholder": "Informe a ação para a tendência de baixa",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "price_ref",
+        "field_label": "Preço de referência",
+        "field_placeholder": "Informe o preço de referência",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "open"
+          },
+          {
+            "option_label": "hight"
+          },
+          {
+            "option_label": "low"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "PivotPoints",
+      "description": "Pontos de Pivot"
+    },
+    "fields": [
+      {
+        "field_id": "window_size",
+        "field_label": "Período",
+        "field_placeholder": "Informe o tamanho do período",
+        "field_type": "text"
+      },
+      {
+        "field_id": "above_r3",
+        "field_label": "Ação para R3",
+        "field_placeholder": "Informe a ação para quando o indicador estiver acima do R3",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "r2_until_r3",
+        "field_label": "Ação para R2",
+        "field_placeholder": "Informe a ação quando o indicador estiver entre R2 e o R3",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "r1_until_r2",
+        "field_label": "Ação para R1",
+        "field_placeholder": "Informe a ação quando o indicador estiver entre R1 e o R2",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "pp_until_r1",
+        "field_label": "Ação para PP",
+        "field_placeholder": "Informe a ação quando o indicador estiver entre PP e o R1",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "pp_until_s1",
+        "field_label": "Ação para PP",
+        "field_placeholder": "Informe a ação quando o indicador estiver entre PP e o S1",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "s1_until_s2",
+        "field_label": "Ação para S1",
+        "field_placeholder": "Informe a ação quando o indicador estiver entre S1 e o S2",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "s2_until_s3",
+        "field_label": "Ação para S2",
+        "field_placeholder": "Informe a ação quando o indicador estiver entre S2 e o S3",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "bellow_s3",
+        "field_label": "Ação para quando o indicador estiver abaixo do S3",
+        "field_placeholder": "Informe a ação quando o indicador estiver abaixo do S3",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "buy"
+          },
+          {
+            "option_label": "sell"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      },
+      {
+        "field_id": "price_ref",
+        "field_label": "Preço de referência",
+        "field_placeholder": "Informe o preço de referência",
+        "field_type": "select",
+        "field_options": [
+          {
+            "option_label": "open"
+          },
+          {
+            "option_label": "hight"
+          },
+          {
+            "option_label": "low"
+          },
+          {
+            "option_label": "close"
+          }
+        ]
+      }
+    ]
+  }
+]
