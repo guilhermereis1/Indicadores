@@ -19,7 +19,7 @@ function App() {
     //     settings: components
     //   }
     // };
-    console.log("c", components);
+    console.log(components);
   };
 
   const handleChange = (id, event) => {
@@ -39,6 +39,7 @@ function App() {
       });
     });
   };
+
   return (
     <FormContext.Provider value={{ handleChange }}>
       <div className="App container">
@@ -47,7 +48,9 @@ function App() {
             <form key={i}>
               <br />
               <br />
-              <h4>Indicador: {e.info.name}</h4>
+              <h4>
+                Indicador: <b>{e.info.name}</b>
+              </h4>
               {e.fields
                 ? e.fields.map((field, i) => <Element key={i} field={field} />)
                 : null}
