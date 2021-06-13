@@ -1,69 +1,61 @@
-import formJSON from "./formElement.json";
 import { useState, useEffect } from "react";
 import Element from "./components/Element";
 import { FormContext } from "./FormContext";
 
-function App() {
-  const [data, setData] = useState([]);
+function App({ data }) {
   const [components, setComponents] = useState([]);
 
   useEffect(() => {
-    setData(formJSON);
+    //
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const data = {
-    //   name: "ma/SimpleMA",
-    //   parameters: {
-    //     settings: components
-    //   }
-    // };
-    console.log(components);
+
+    const newData = {
+      name: data.info.name,
+      parameters: {
+        settings: components
+      }
+    };
+    console.log(newData);
   };
 
   const handleChange = (id, event) => {
-    data.forEach((field) => {
+    data.fields.forEach((field) => {
       const newElements = { ...field };
+      const { field_id } = newElements;
 
-      newElements.fields.forEach((f) => {
-        const { field_id } = f;
-
-        if (id === field_id) {
-          field["field_value"] = event.target.value;
-          setComponents((prevState) => ({
-            ...prevState,
-            [field_id]: field["field_value"]
-          }));
-        }
-      });
+      if (id === field_id) {
+        field["field_value"] = event.target.value;
+        setComponents((prevState) => ({
+          ...prevState,
+          [field_id]: field["field_value"]
+        }));
+      }
     });
   };
 
   return (
     <FormContext.Provider value={{ handleChange }}>
       <div className="App container">
-        {data &&
-          data.map((e, i) => (
-            <form key={i}>
-              <br />
-              <br />
-              <h4>
-                Indicador: <b>{e.info.name}</b>
-              </h4>
-              {e.fields
-                ? e.fields.map((field, i) => <Element key={i} field={field} />)
-                : null}
-              <br />
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={(e) => handleSubmit(e)}
-              >
-                Enviar
-              </button>
-            </form>
+        <h4>
+          Indicador: <b>{data.info.name}</b>
+        </h4>
+        <form>
+          {data.fields.map((field) => (
+            <Element key={field.field_id} field={field} />
           ))}
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={(e) => handleSubmit(e)}
+          >
+            Enviar
+          </button>
+          <br />
+          <br />
+        </form>
       </div>
     </FormContext.Provider>
   );

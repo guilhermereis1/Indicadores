@@ -3,6 +3,7 @@ import { FormContext } from "../../FormContext";
 
 const Input = ({ field_id, field_label, field_placeholder }) => {
   const { handleChange } = useContext(FormContext);
+
   return (
     <div className="mb-3">
       <label htmlFor="exampleInputEmail1" className="form-label">

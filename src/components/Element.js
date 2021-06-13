@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./elements/Input";
 import Select from "./elements/Select";
+
 const Element = ({
   field: {
     field_type,
@@ -31,7 +32,6 @@ const Element = ({
           field_options={field_options}
         />
       );
-
     default:
       return null;
   }
